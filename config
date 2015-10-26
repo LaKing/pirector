@@ -1,0 +1,11 @@
+
+## playlist related
+AUTOSTART_PLAYLIST=true
+AUTOSTART_TIME=14:45
+PLAYLIST_ENABLED=true
+MUSIC_DIR=~/Music
+
+## recording related
+RECORD_ENABLED=true
+UPLOAD_ENABLED=true
+REC_DIR=~/rec
