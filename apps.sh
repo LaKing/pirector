@@ -220,12 +220,14 @@ do
     then
 	xsetroot -solid red
         bash ~/cirrus/Record_from_lineIn.sh
+	echo RECORD-LINEIN > current
     fi
 
     if [ "$res" == "11" ]
     then
 	xsetroot -solid yellow
 	bash ~/cirrus/SPDIF_record.sh
+	echo RECORD-SPDIF > current
     fi
 
     if [ "$res" == "35" ]

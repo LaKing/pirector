@@ -147,3 +147,7 @@ echo "TempDir=/home/$USERNAME/.audacity_temp" >> /home/$USERNAME/.audacity-data/
 
 chown -R $USERNAME:$USERNAME /home/$USERNAME/.audacity-data
 chown -R $USERNAME:$USERNAME /home/$USERNAME/.audacity_temp
+
+## copy the cirrus files and set 
+cp -a /home/pi/cirrus /home/$USERNAME
+chown -R $USERNAME:$USERNAME /home/$USERNAME/cirrus
