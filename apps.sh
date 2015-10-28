@@ -267,12 +267,14 @@ do
 
     if [ "$res" == "30" ]
     then
-        echo $REC_DIR/$NOW > log
-        mkdir -p $REC_DIR/$NOW
-        
+	## create an empty file that we can just overwrite with a few clicks
+	if [ ! -f "$REC_DIR/$PREFIX-$NOW.flac" ] && [ ! -z "$PREFIX" ]
+	then
+    	    echo '' > $REC_DIR/$PREFIX-$NOW.flac
+        fi
         cat audacity.cfg > ~/.audacity-data/audacity.cfg
         #echo "Parh=$(dirname $REC_DIR/$NOW)/$NOW" >> ~/.audacity-data/audacity.cfg
-        $(cd $REC_DIR/$NOW && audacity)
+        $(cd $REC_DIR && audacity)
     fi
 
 
